@@ -10,7 +10,7 @@ dotenv.config();
 
 //Configs
 var corsOptions = {
-    orgin : 'https://fullstackfrontend-cursoreactjs.herokuapp.com',
+    origin : 'https://fullstackfrontend-cursoreactjs.herokuapp.com',
     optionsSuccessStatus : 200
 }
 
