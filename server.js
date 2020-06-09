@@ -10,11 +10,11 @@ dotenv.config();
 
 //Configs
 var corsOptions = {
-    orgin : 'http://localhost:3000',
+    orgin : 'https://fullstackfrontend-cursoreactjs.herokuapp.com',
     optionsSuccessStatus : 200
 }
 
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(express.json());
 
 
@@ -31,7 +31,6 @@ app.use((req,res,next) => {
     req.io = io;
     next();
 })
-
 
 
 //Rotas
