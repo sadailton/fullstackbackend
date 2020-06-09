@@ -3,20 +3,21 @@ const mongoose = require('mongoose');
 const requireDir = require('require-dir');
 const cors = require('cors')
 const dotenv = require('dotenv')
-const app = express();
-const server = require('http').Server(app);
-const io = require('socket.io')(server)
+
 dotenv.config();
 
 //Configs
+const app = express();
+const server = require('http').Server(app);
+const io = require('socket.io')(server)
+
 var corsOptions = {
-    origin : 'https://fullstackfrontend-cursoreactjs.herokuapp.com/',
+    origin : 'https://fullstackfrontend-cursoreactjs.herokuapp.com',
     optionsSuccessStatus : 200
 }
 
 app.use(cors(corsOptions));
 app.use(express.json());
-
 
 //Database connection
 //mongoose.connect('mongodb://localhost:27017/databaseName', {useNewUrlParser: true, useUnifiedTopology: true});
