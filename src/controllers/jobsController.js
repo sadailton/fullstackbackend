@@ -11,6 +11,6 @@ module.exports = {
     async listJobs(req,res){
         const response = await Jobs.find();
         //req.io.emit('newjob',response);
-        //res.json(response);
+        res.json(response);
     }
 }
