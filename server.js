@@ -24,7 +24,7 @@ app.use(express.json());
 mongoose.connect(process.env.MONGODB,{useNewUrlParser: true, useUnifiedTopology: true});
 
 //Models
-requireDir('./src/Models');
+requireDir('./src/models');
 
 //Websocket - middleware
 app.use((req,res,next) => {
